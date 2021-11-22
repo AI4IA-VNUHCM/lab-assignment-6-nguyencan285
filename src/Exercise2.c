@@ -15,27 +15,32 @@ Ex:
 
 void Ex2(int n, char *str[])
 {
+	
 	//Your codes here	
 	char *temp[100];
-	for(int i=0;i<n;i++){
+	int index[n];
+	for(int i=0;i<n;i++)
+	index[i]=i;
+		for(int i=0;i<n;i++){
 		for(int j=i+1;j<n;j++)
-		{
-			int e=(strlen(str[i])>strlen(str[j])?strlen(str[j]) : strlen(str[i]));
-			for(int z=0;z<e;z++){
-			if(str[i][z]>str[j][z])
+		{	int t=0;
+			while(str[index[i]][t]!='\0')
+			{
+			if(str[index[i]][t]>str[index[j]][t])
 				{
-				char temp[30];
-				temp[0] = str[i];
-				str[i] = str[j];
-				str[j] = temp[0];
+				int temp=index[i];
+				index[i] = index[j];
+				index[j] = temp;
 				}
-				if (str[i][z] < str[j][z]) 
+				else if(str[index[i]][t]==str[index[j]][t])
+				t++;
+				else
 				break;
 			}
 		}
 	}
 	for(int i=0;i<n;i++)
-        printf("%s ",str[i]);
+        printf("%s ",str[index[i]]);
 }
 
 int main(int argc, char *argv[]) {
