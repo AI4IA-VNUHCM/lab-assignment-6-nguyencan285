@@ -14,6 +14,18 @@ Ex:
 
 void Ex2(int n, char *str[]){
 	//Your codes here
+	int i,j;
+	char temp[30];
+	for (i = 0; i < n; ++i) {
+        for (j = i + 1; j < n; ++j) {
+            
+            if ( strcmp(str[i], str[j]) > 0) {
+                strcpy(temp, str[i]);
+                strcpy(str[i], str[j]);
+                strcpy(str[j], temp);
+                }
+        }
+    }
 	
 }
 
