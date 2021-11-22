@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	//Ex2(argc, testcase);
-	int i,j;
+	int j;
 	char temp[30];
 	for (i = 0; i < argc; ++i) {
         for (j = i + 1; j < argc; ++j) {
