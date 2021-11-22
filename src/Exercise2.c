@@ -12,34 +12,34 @@ Ex:
 #include <math.h>
 #include <string.h>
 
-//void Ex2(int n, char *str[]){
-//	//Your codes here	
-//}
+void Ex2(int n, char *str[])
+{
+	//Your codes here	
+	for(int i=0;i<n;i++){
+	for(int j=i+1;j<n;j++)
+	if(strcmp(str[i],str[j])>0)
+	{
+	char temp[30];
+	strcpy(temp, str[i]);
+	strcpy(str[i], str[j]);
+	strcpy(str[j], temp);
+	
+	}
+	}
+	for(int i=0;i<n;i++)
+         printf("%s",str[i]);
+}
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
 	char *testcase[argc];
-	int i,j;
+	int i;
 	for(i=0; i<argc; i++){
 		testcase[i] = argv[i+1];
 	}
 	
-	//Ex2(argc, testcase);
-	char temp[30];
-	for (i = 0; i < argc; ++i) {
-        for (j = i + 1; j < argc; ++j) {
-            
-            if ( strcmp(testcase[i], testcase[j]) > 0) 
-				{
-				
-                strcpy(temp, testcase[i]);
-                strcpy(testcase[i], testcase[j]);
-                strcpy(testcase[j], temp);
-                }
-        }
-    }
-	for(i=0;i<argc;i++)
-         printf("%s ",testcase[i]);
+	Ex2(argc, testcase);
+	
 	return 0;
 }
