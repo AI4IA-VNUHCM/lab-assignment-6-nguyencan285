@@ -51,9 +51,9 @@ void Ex5(char *str){
 	//Your codes here
 	int n= strlen(str);
 	if(check(str,n))
-	printf("Valid");
+	printf("Valid!");
 	else
-	printf("Invalid");
+	printf("Invalid!");
 
 	
 }
