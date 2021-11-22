@@ -20,19 +20,19 @@ int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
 	char *testcase[argc];
-	int i;
+	int i,j;
 	for(i=0; i<argc; i++){
 		testcase[i] = argv[i+1];
 	}
 	
 	//Ex2(argc, testcase);
-	int j;
 	char temp[30];
 	for (i = 0; i < argc; ++i) {
         for (j = i + 1; j < argc; ++j) {
             
             if ( strcmp(testcase[i], testcase[j]) > 0) 
 				{
+				
                 strcpy(temp, testcase[i]);
                 strcpy(testcase[i], testcase[j]);
                 strcpy(testcase[j], temp);
