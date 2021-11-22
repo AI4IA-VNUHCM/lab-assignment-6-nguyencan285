@@ -16,14 +16,16 @@ void Ex2(int n, char *str[])
 {
 	//Your codes here	
 	for(int i=0;i<n;i++){
-	for(int j=i+1;j<n;j++)
-	if(strcmp(str[i],str[j])>0)
-	{
-	char temp[30];
-	strcpy(temp, str[i]);
-	strcpy(str[i], str[j]);
-	strcpy(str[j], temp);
-	}
+		for(int j=i+1;j<n;j++)
+		{
+			if(str[i]>str[j])
+				{
+				char temp[30];
+				strcpy(temp, str[i]);
+				strcpy(str[i], str[j]);
+				strcpy(str[j], temp);
+				}
+		}
 	}
 	for(int i=0;i<n;i++)
         printf("%s ",str[i]);
