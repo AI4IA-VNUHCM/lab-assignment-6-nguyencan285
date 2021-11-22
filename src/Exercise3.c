@@ -12,11 +12,11 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#define size 100
+
 
 void Ex3(char *str){
 	//Your codes here
-	char words[size][size],min[size],max[size];
+	char words[1000][1000],min[1000],max[1000];
 	int i=0,j=0,k,leng;
 	for(k=0;str[k]!='\0';k++)
 	{
@@ -45,7 +45,6 @@ void Ex3(char *str){
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	char *testcase = argv[1];
-	
 	Ex3(testcase);
 	return 0;
 }
