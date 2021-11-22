@@ -15,6 +15,12 @@ Ex:
 #define size 100
 void Ex3(char *str){
 	//Your codes here
+	
+}
+
+int main(int argc, char *argv[]) {
+	//testing variable, applying it to your algorithm for auto-evaluating
+	char *str = argv[1];
 	char words[size][size],min[size],max[size];
 	int i=0,j=0,k,leng;
 	for(k=0;str[k]!='\0';k++)
@@ -40,13 +46,7 @@ void Ex3(char *str){
 	}
 	printf("Shortest word: %s\n",min);
 	printf("Longest word: %s",max);
-}
-
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	char *testcase = argv[1];
-	
-	Ex3(testcase);
+	//Ex3(testcase);
 	
 	return 0;
 }
