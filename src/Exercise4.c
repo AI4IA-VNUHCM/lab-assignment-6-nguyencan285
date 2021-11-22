@@ -15,7 +15,7 @@ Ex:
 
 void Ex4(char *str){
 	//Your codes here
-	int i=0,j=0,count =0;
+	int i=0,j=0;
 	while (str[i]!='\0')
 	{
 		if (str[i]!= ' ')
@@ -26,10 +26,6 @@ void Ex4(char *str){
 				str[j++]=str[i+1];
 				i++;
 			}		
-			}
-			else
-			{
-				count++;
 			}
 			i++;
 	}
